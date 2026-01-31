@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    /* Use a high-quality professional background image */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('logo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-container {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    perspective: 1000px; /* For a slight 3D feel */
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Floating Animation */
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+h2 {
+    color: #111;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.features li {
+    padding: 8px 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.join-btn {
+    padding: 15px 30px;
+    border: 2px solid #D4AF37;
+    background: transparent;
+    color: #111;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.worker-btn {
+    background: #D4AF37;
+    color: white;
+}
+
+.join-btn:hover {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .join-container {
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+}
+
+/* Floating Glassy Navbar */
+.navbar {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover { color: #D4AF37; }
+
+/* Burger Menu - Hidden on Desktop */
+.burger { 
+    display: none; 
+    cursor: pointer; 
+    padding: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Mobile Responsiveness (The Fix) */
+@media screen and (max-width: 900px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+
+    .burger {
+        display: block; /* Shows the burger */
+    }
+
+    .nav-links {
+        display: flex; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Sits below the navbar */
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95); 
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 20px 0;
+        
+        /* Hidden state */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.4s ease;
+    }
+
+    /* Shown state when JS toggles 'active' */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}

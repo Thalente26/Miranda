@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SA Recruit</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+             <nav class="navbar">
+        <div class="logo">
+    <a href="index.html">
+        <img src="logon.png" alt="Recruit Logo" class="nav-logo">
+    </a>
+</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="company.html">Companies</a></li>
+            <li><a href="portal.html">Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <section class="contact-form-section">
+            <div class="form-header">
+                <h1>Get in Touch</h1>
+                <p>Have a question about vetting or job postings? Our SA-based team is here to help.</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="input-row">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Thabo Khoza" required>
+                    </div>
+                    <div class="field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="thabo@example.co.za" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Enquiry Type</label>
+                    <select>
+                        <option>General Inquiry</option>
+                        <option>Verification/Safety Help</option>
+                        <option>Employer Support</option>
+                        <option>Dispute Resolution</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="How can we assist you?"></textarea>
+                </div>
+
+                <div class="popia-box">
+                    <input type="checkbox" id="popia" required>
+                    <label for="popia">I consent to SA Recruit processing my data in line with <strong>POPIA regulations</strong>.</label>
+                </div>
+
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d105972.31033481426!2d25.518148499685132!3d-33.89906080552835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sport%20elizabeth%20tvet%20college!5e0!3m2!1sen!2sza!4v1769875557353!5m2!1sen!2sza" width="500" height="350" style="border:0;"
+                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="info-details">
+                <div class="info-item">
+                    <h4>Headquarters</h4>
+                    <p>63CH New Brighton<br>Port Elizabeth, 6200</p>
+                </div>
+                <div class="info-item">
+                    <h4>Emergency Support</h4>
+                    <p>For urgent safety or verification issues:<br><strong>+27 81 428 1877</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

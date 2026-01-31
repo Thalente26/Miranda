@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal | SA Recruit</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+
+
+    <div class="portal-wrapper">
+        <aside class="portal-nav">
+            <div class="user-id">
+                <div class="avatar">T</div>
+                <div class="user-meta">
+                    <h4>Thabo M.</h4>
+                    <span class="badge-vetted">ID Verified</span>
+                </div>
+            </div>
+            <nav class="side-menu">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">My Documents</a>
+                <a href="#">Applications</a>
+                <a href="#">Messages</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <main class="portal-content">
+            
+            <div id="jobseeker-view" class="view-container">
+                <header class="view-header">
+                    <h1>Worker Dashboard</h1>
+                    <div class="profile-strength">
+                        <span>Profile Strength: 85%</span>
+                        <div class="progress-bar"><div class="fill" style="width: 85%;"></div></div>
+                    </div>
+                </header>
+
+                <div class="portal-grid">
+                    <div class="portal-card upload-section">
+                        <h3>Compliance & Identity</h3>
+                        <p class="po-notif">POPIA Status: <span class="text-green">Compliant</span></p>
+                        
+                        <div class="upload-item">
+                            <span>Certified ID Copy</span>
+                            <button class="up-btn">Update</button>
+                        </div>
+                        <div class="upload-item">
+                            <span>Police Clearance (Optional)</span>
+                            <button class="up-btn empty">Upload</button>
+                        </div>
+                        <div class="upload-item">
+                            <span>Proof of Residence</span>
+                            <button class="up-btn">Update</button>
+                        </div>
+                    </div>
+
+                    <div class="portal-card info-section">
+                        <h3>My Professional Profile</h3>
+                        <div class="form-group">
+                            <label>Primary Skill</label>
+                            <input type="text" value="Senior Site Foreman">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" value="Soweto, Gauteng">
+                        </div>
+                        <div class="form-group">
+                            <label>Expected Hourly Rate (R)</label>
+                            <input type="number" value="150">
+                        </div>
+                        <button class="save-btn">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="employer-view" class="view-container" style="display: none;">
+                <header class="view-header">
+                    <h1>Employer Portal</h1>
+                    <button class="post-job-btn">+ Post New Job</button>
+                </header>
+                </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Temporary logic to toggle views for your preview
+        function switchView(type) {
+            document.getElementById('jobseeker-view').style.display = type === 'worker' ? 'block' : 'none';
+            document.getElementById('employer-view').style.display = type === 'employer' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

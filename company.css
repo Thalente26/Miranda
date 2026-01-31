@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #8d9daf;
+    padding-top: 120px; /* Space for navbar */
+}
+
+.directory-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.directory-header h1 {
+    font-size: 2.5rem;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 8%;
+    max-width: 1400px;
+    margin: 0 auto 50px;
+}
+
+.company-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.company-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Trust Badges */
+.badge-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.vetted { background: #e3fcef; color: #006644; }
+.bee { background: #fff0b3; color: #826a00; }
+.premium { background: #deebff; color: #0747a6; }
+
+/* Logo Area */
+.company-logo-box {
+    width: 80px;
+    height: 80px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.company-logo-box img {
+    max-width: 70%;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.company-card:hover .company-logo-box img {
+    filter: grayscale(0%);
+}
+
+.industry-tag {
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.company-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.company-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.view-profile-btn {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.view-profile-btn:hover {
+    background: #D4AF37;
+    color: #000;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .company-grid {
+        grid-template-columns: 1fr;
+    }
+}

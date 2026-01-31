@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Jobs | SA Recruit</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="jobs.css">
+</head>
+<body>
+             <nav class="navbar">
+        <div class="logo">
+    <a href="index.html">
+        <img src="logon.png" alt="Recruit Logo" class="nav-logo">
+    </a>
+</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="company.html">Companies</a></li>
+            <li><a href="portal.html">Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <main class="jobs-layout">
+        <aside class="filter-sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="construction">Construction</option>
+                    <option value="household">Household/Cleaning</option>
+                    <option value="office">Office/Admin</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Location (SA)</label>
+                <input type="text" placeholder="e.g. Sandton, GP">
+            </div>
+            <div class="filter-group">
+                <label>Rate (R/hr)</label>
+                <input type="range" min="50" max="1000" step="50">
+            </div>
+            <button class="filter-btn">Update Results</button>
+        </aside>
+
+        <section class="listings-container">
+            <div class="job-card" onclick="expandJob(this)">
+                <div class="job-header">
+                    <div>
+                        <h2>Senior Site Foreman</h2>
+                        <span class="location-tag">Pretoria, Gauteng</span>
+                    </div>
+                    <span class="salary-tag">R45,000 pm</span>
+                </div>
+                <div class="job-excerpt">
+                    <p>Seeking an experienced foreman for a high-end residential project in Waterkloof...</p>
+                </div>
+                <div class="job-details">
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>10+ Years Experience</li>
+                        <li>Valid SACPCMP Registration</li>
+                        <li>Clean background check (Verified)</li>
+                    </ul>
+                    <button class="apply-btn">Express Interest</button>
+                </div>
+            </div>
+
+             <section class="listings-container">
+            <div class="job-card" onclick="expandJob(this)">
+                <div class="job-header">
+                    <div>
+                        <h2>Senior Software Dev</h2>
+                        <span class="location-tag">Gqeberha, Newton Park</span>
+                    </div>
+                    <span class="salary-tag">R15,000 pm</span>
+                </div>
+                <div class="job-excerpt">
+                    <p>Qualified Node.Js software developer with cross-functional communication and collaboration skills.</p>
+                </div>
+                <div class="job-details">
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>3+ Years Experience</li>
+                        <li>Valid Portfolio </li>
+                        <li>Clean background check (Verified)</li>
+                    </ul>
+                    <button class="apply-btn">Express Interest</button>
+                </div>
+            </div>
+            </section>
+             <section class="listings-container">
+            <div class="job-card" onclick="expandJob(this)">
+                <div class="job-header">
+                    <div>
+                        <h2>Senior Software Dev</h2>
+                        <span class="location-tag">Gqeberha, Newton Park</span>
+                    </div>
+                    <span class="salary-tag">R15,000 pm</span>
+                </div>
+                <div class="job-excerpt">
+                    <p>Qualified Node.Js software developer with cross-functional communication and collaboration skills.</p>
+                </div>
+                <div class="job-details">
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>3+ Years Experience</li>
+                        <li>Valid Portfolio </li>
+                        <li>Clean background check (Verified)</li>
+                    </ul>
+                    <button class="apply-btn">Express Interest</button>
+                </div>
+            </div>
+            </section>
+             <section class="listings-container">
+            <div class="job-card" onclick="expandJob(this)">
+                <div class="job-header">
+                    <div>
+                        <h2>Senior Software Dev</h2>
+                        <span class="location-tag">Gqeberha, Newton Park</span>
+                    </div>
+                    <span class="salary-tag">R15,000 pm</span>
+                </div>
+                <div class="job-excerpt">
+                    <p>Qualified Node.Js software developer with cross-functional communication and collaboration skills.</p>
+                </div>
+                <div class="job-details">
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>3+ Years Experience</li>
+                        <li>Valid Portfolio </li>
+                        <li>Clean background check (Verified)</li>
+                    </ul>
+                    <button class="apply-btn">Express Interest</button>
+                </div>
+            </div>
+            </section>
+            </section>
+
+
+        <aside class="profile-sidebar">
+            <div class="mini-profile">
+                <div class="profile-pic"></div>
+                <h3>Welcome back, Thabo</h3>
+                <p>Status: <span class="status-verified">Verified</span></p>
+                <hr>
+                <div class="stats">
+                    <div><strong>12</strong><br>Matches</div>
+                    <div><strong>4</strong><br>Apps</div>
+                </div>
+                <button class="portal-btn">View Full Profile</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script> <script src="jobs.js"></script>   
+<div id="verificationModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Verification Required</h2>
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="icon-shield">🛡️</div>
+            <p>To apply for jobs on <strong>SA Recruit</strong>, we require a verified South African ID and a clear background check.</p>
+            <ul class="verification-list">
+                <li>✓ Protects you and the employer</li>
+                <li>✓ POPIA Compliant data handling</li>
+                <li>✓ Increases your match rate by 80%</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="portal.html" class="verify-btn">Complete Profile in Portal</a>
+            <button class="maybe-later" onclick="closeModal()">Maybe Later</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
